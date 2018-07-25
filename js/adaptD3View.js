@@ -60,6 +60,7 @@ define([
                     break;
             }
 
+            this.$('.m-d3__container').addClass(chartType);
             this.chartFile.initialize.call(this);
 
         },
