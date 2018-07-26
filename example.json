@@ -1,12 +1,85 @@
 {
-    "_id":"c-05",
-    "_parentId":"b-05",
-    "_type":"component",
-    "_component":"text",
-    "_classes":"",
-    "_layout":"left",
-    "title":"Our first look at a component",
-    "displayTitle":"Our first look at a component",
-    "body":"This component you're reading is a text component. All components take this form of a title and body - except a blank component. However it's important to realise that title and body attributes are not needed. <br><br>Take for instance the media component opposite or below on a smaller device - has no body attribute. Instead of the HTML being rendered Adapt simply doesn't render it. The title attribute is simply a break tag to push the media component level with the opposite component.",
-    "instruction":""
+    "_id": "c-02-1",
+    "_parentId": "b-02-1",
+    "_type": "component",
+    "_component": "adaptD3",
+    "_classes": "d3-1",
+    "_layout": "full",
+    "title": "d3-1",
+    "displayTitle": "Bar Chart",
+    "body": "",
+    "chartType": "bar",
+    "instruction": "Click for randomised data",
+    "initialData": [80, 100, 56, 120, 180, 30,120, 160],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+},
+{
+    "_id": "c-02-2",
+    "_parentId": "b-02-2",
+    "_type": "component",
+    "_component": "adaptD3",
+    "_classes": "d3-2",
+    "_layout": "full",
+    "title": "d3-2",
+    "displayTitle": "Pie Chart",
+    "body": "",
+    "chartType": "pie",
+    "instruction": "Click for randomised data",
+    "initialData": [40, 10, 106, 60, 140, 45, 70, 90],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+},
+{
+    "_id": "c-02-3",
+    "_parentId": "b-02-3",
+    "_type": "component",
+    "_component": "adaptD3",
+    "_classes": "d3-3",
+    "_layout": "full",
+    "title": "d3-3",
+    "displayTitle": "Line Chart",
+    "body": "",
+    "chartType": "line",
+    "instruction": "Click for randomised data",
+    "initialData": [40, 10, 106, 60, 140],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+},
+{
+    "_id": "c-02-4",
+    "_parentId": "b-02-4",
+    "_type": "component",
+    "_component": "adaptD3",
+    "_classes": "d3-4",
+    "_layout": "full",
+    "title": "d3-4",
+    "displayTitle": "Force-Directed Graph",
+    "body": "",
+    "chartType": "force",
+    "instruction": "Click & drag to move nodes. Click button to change force.",
+    "initialData": [40, 10, 106, 60, 140],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+},
+{
+    "_id": "c-02-5",
+    "_parentId": "b-02-5",
+    "_type": "component",
+    "_component": "adaptD3",
+    "_classes": "d3-5",
+    "_layout": "full",
+    "title": "d3-5",
+    "displayTitle": "Collapsible Tree Diagram",
+    "body": "",
+    "chartType": "tree",
+    "instruction": "Click nodes to hide or reveal the tree structure.",
+    "initialData": [40, 10, 106, 60, 140],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
 }

@@ -4,8 +4,9 @@ define([
     './d3Bar',
     './d3Pie',
     './d3Line',
-    './d3Force'
-], function(ComponentView, d3, d3Bar, d3Pie, d3Line, d3Force) {
+    './d3Force',
+    './d3Tree'
+], function(ComponentView, d3, d3Bar, d3Pie, d3Line, d3Force, d3Tree) {
 
 
     var  AdaptD3View = ComponentView.extend({
@@ -61,6 +62,9 @@ define([
                     break;
                 case 'force':
                     this.chartFile = d3Force;
+                    break;
+                case 'tree':
+                    this.chartFile = d3Tree;
                     break;
             }
 

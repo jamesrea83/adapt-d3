@@ -8,9 +8,7 @@ min-height: 300px;
 
 
 .m-d3__container.pie {
-    path {
-        stroke-width: 6;
-        }
+
 }
 
 .m-d3__container.line {
@@ -42,4 +40,22 @@ min-height: 300px;
     .nodes circle:hover {
         cursor: pointer;
       }
+}
+
+.m-d3__container.tree {
+    .node circle {
+      fill: #fff;
+      stroke: steelblue;
+      stroke-width: 3px;
+    }
+
+    .node text {
+      font: 12px sans-serif;
+    }
+
+    .link {
+      fill: none;
+      stroke: #ccc;
+      stroke-width: 2px;
+    }
 }
