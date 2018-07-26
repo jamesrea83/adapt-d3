@@ -76,7 +76,7 @@ define([
 
             //update line element
             this.path
-                .datum(this.dataSet);
+                .datum(this.dataSet)
                 .transition()
                 .duration(500)
                 .attr('class', 'line')
@@ -84,7 +84,7 @@ define([
 
             //update data point elements
             this.dot 
-                .data(this.dataSet);
+                .data(this.dataSet)
                 .transition()
                 .duration(500)
                 .attr('cx', function(d, i) { return this.xScale(i); }.bind(this))

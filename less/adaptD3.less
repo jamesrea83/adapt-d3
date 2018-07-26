@@ -7,6 +7,12 @@ min-height: 300px;
 }
 
 
+.m-d3__container.pie {
+    path {
+        stroke-width: 6;
+        }
+}
+
 .m-d3__container.line {
     /* Style the lines by removing the fill and applying a stroke */
     .line {
@@ -23,3 +29,17 @@ min-height: 300px;
 }
 
 
+.m-d3__container.force {
+    .links line {
+      stroke: #999;
+      stroke-opacity: 0.6;
+    }
+
+    .nodes circle {
+      stroke: #fff;
+      stroke-width: 1.5px;
+    }
+    .nodes circle:hover {
+        cursor: pointer;
+      }
+}

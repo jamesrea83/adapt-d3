@@ -75,7 +75,7 @@ define(function() {
         triggerClicked: function() {
             this.clickCounter++;
             if (this.clickCounter % 3 === 0) {
-                this.length = Math.floor(Math.random() * 8) + 4;
+                this.length = Math.floor(Math.random() * 12) + 6;
             }
             var data2 = [];
             for (var i = 0; i < this.length; i++) {
