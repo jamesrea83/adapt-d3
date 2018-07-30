@@ -21,10 +21,10 @@ define([
                         'name': 'Level 2: A',
                         'children': [
                             {
-                                'name': 'Son of A'
+                                'name': '2-A-One'
                             },
                             {
-                                'name': 'Daughter of A'
+                                'name': '2-A-Two'
                             }
                         ]
                     },

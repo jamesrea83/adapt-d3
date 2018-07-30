@@ -27,6 +27,7 @@ define(function() {
             bars
                 .enter()
                 .append('rect')
+                .attr('class', 'rect')
                 .attr('y', function(d) {return height - d})
                 .attr('height', function(d) {return d})
                 .attr('width', barWidth - 1)
@@ -67,9 +68,6 @@ define(function() {
                 .attr('y', function(d) {return height - d + 20})
                 .attr('text-anchor', 'middle')
                 .text(function(d) {return d;})
-
-            this.svg.selectAll('rect')
-                .style('fill', d3Bar.getRandomColor())
         },
 
         triggerClicked: function() {

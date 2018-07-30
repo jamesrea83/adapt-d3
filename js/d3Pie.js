@@ -11,9 +11,6 @@ define([
             d3Pie.updatePie.call(this);
         },
 
-//http://www.cagrimmett.com/til/2016/08/19/d3-pie-chart.html
-//http://www.cagrimmett.com/til/2016/08/27/d3-transitions.html
-
         setupPie: function() {
 
             var data = this.data;
@@ -22,20 +19,22 @@ define([
                 height = this.height,
                 radius = Math.min(width, height) / 2;
 
-            this.colorArray = ['#CC9999', '#B3B31A', '#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
-                              '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
-                              '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
+            this.colorArray = ['#AA3939', '#226666', '#AA8439'];
 
             var pie = d3.pie()
                 .value(function(d) {return d;})(data);
 
+
+
+
             this.arc = d3.arc()
                 .outerRadius(radius - 10)
-                .innerRadius(0)
+                .innerRadius(.5);
 
             this.labelArc = d3.arc()
                 .outerRadius(radius - 40)
                 .innerRadius(radius - 70);
+
 
             this.innerSvg = this.svg.append('g')
                 .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')'); //move centre point
@@ -55,7 +54,7 @@ define([
             /*CHART SECTIONS*/
             path = this.innerSvg
                 .selectAll('path')
-                .data(pie);
+                .data(pie)
 
             /*remove elements for superflous data points*/
             path
@@ -68,7 +67,7 @@ define([
                 .enter()
                 .append('path')
                 .attr('d', arc)
-                .attr('stroke-width', 6)
+                .attr('class', 'path')
                 .each(function(d) { this._current = d; });
 
             /*update exisiting elements*/
@@ -76,6 +75,8 @@ define([
                 .transition()
                 .duration(500)
                 .attrTween('d', arcTween);
+
+
 
             /*LABELS*/
             labels = this.innerSvg.selectAll('text')
@@ -153,51 +154,3 @@ define([
     return d3Pie
 
 })
-
-
-
-/*
-        drawPie: function() {
-
-            var data = this.data;
-
-            var width = this.width,
-                height = this.height,
-                radius = Math.min(width, height) / 2;
-
-            var arc = d3.arc()
-                .outerRadius(radius - 10)
-                .innerRadius(radius - 100);
-
-            var labelArc = d3.arc()
-                .outerRadius(radius - 40)
-                .innerRadius(radius - 40);
-
-            var pie = d3.pie()
-                .sort(null)
-                .value(function(d) { return d; });
-
-            var svg = this.svg
-                .append("g")
-                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-            var g = svg.selectAll("g")
-                .data(pie(data))
-                .enter()
-                .append("g")
-
-            g.exit()
-                .remove()
-
-              g.append("path")
-                .attr("d", arc)
-                .style("fill", function(d) { return d3Pie.getRandomColor();})
-                .each(function(d) {this._current = d;});
-
-              g.append("text")
-                .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-                .attr("dy", ".35em")
-                .text(function(d) { return d.data; });
-
-        },
-*/

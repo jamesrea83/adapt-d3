@@ -2,13 +2,24 @@
 
 min-height: 300px;
     
-
-
 }
 
 
-.m-d3__container.pie {
+.m-d3__container.bar {
+  .svg .rect {
+    fill: steelblue;
+  }
+  .svg .rect:hover {
+    fill: orange;
+  }
+}
 
+.m-d3__container.pie {
+  .path {
+    color: #e6e6e6;
+    stroke: #e6e6e6;
+    stroke-width: 2px;
+  }
 }
 
 .m-d3__container.line {
